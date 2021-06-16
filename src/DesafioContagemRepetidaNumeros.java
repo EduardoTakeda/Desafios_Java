@@ -17,14 +17,15 @@ public class DesafioContagemRepetidaNumeros {
 
 //declare as variaveis corretamente e continue a sua solução
 
-            ArrayList<Integer> variavel = new ArrayList<Integer>();
+            ArrayList<Integer> lista = new ArrayList<Integer>();
 
             int  n  =sc.nextInt();
             while(  n  -->0)
-                variavel.add(sc.nextInt());
 
-            SortedMap<Integer, Integer> variavel = new TreeMap<>();
-            lista.forEach(id -> variavel.compute(id, (   , ) -> (    == null ? 1 :  + 1)));
+                lista.add(sc.nextInt());
+
+            SortedMap<Integer, Integer> contaQuant = new TreeMap<>();
+            lista.forEach(id -> contaQuant.compute(id, (  key , val) -> (  val  == null ? 1 : val + 1)));
 
 
             contaQuant.entrySet().forEach(entry->{
@@ -34,4 +35,3 @@ public class DesafioContagemRepetidaNumeros {
             sc.close();
         }
     }
-
